@@ -1,0 +1,86 @@
+
+version: 2
+
+sources:
+  - name: bingads_raw
+    schema: bingads_raw
+    tables:
+      - name: accounts
+        identifier: account_history
+      - name: campaigns
+        identifier: campaign_history
+      - name: ad_groups
+        identifier: ad_group_history
+      - name: ads
+        identifier: ad_history
+      - name: ad_performance_daily_report
+      - name: campaign_performance_daily_report
+      - name: search_query_performance_daily_report
+      - name: keywords
+        identifier: keyword_history
+      - name: keyword_performance_daily_report
+
+models:
+  - name: bingads_accounts
+    columns: 
+      - name: unique_key
+        tests:
+          - unique
+          - not_null
+  - name: bingads_campaigns
+    columns: 
+      - name: unique_key
+        tests:
+          - unique
+          - not_null
+  - name: _stg_bingads_campaigns_insights 
+    columns:
+      - name: unique_key
+        tests: 
+          - unique
+          - not_null
+  - name: bingads_performance_by_campaign
+    columns:
+      - name: unique_key
+        tests: 
+          - unique
+  - name: bingads_ad_groups
+    columns: 
+      - name: unique_key
+        tests:
+          - unique
+          - not_null
+  - name: bingads_ads
+    columns: 
+      - name: unique_key
+        tests:
+          - unique
+          - not_null
+  - name: _stg_bingads_ads_insights 
+    columns:
+      - name: unique_key
+        tests: 
+          - unique
+          - not_null
+  - name: bingads_performance_by_ad
+    columns:
+      - name: unique_key
+        tests: 
+          - unique
+  - name: bingads_keywords
+    columns: 
+      - name: unique_key
+        tests:
+          - unique
+          - not_null
+  - name: _stg_bingads_keywords_insights
+    columns: 
+      - name: unique_key
+        tests:
+          - unique
+          - not_null 
+  - name: bingads_performance_by_keyword
+    columns:
+      - name: unique_key
+        tests: 
+          - unique
