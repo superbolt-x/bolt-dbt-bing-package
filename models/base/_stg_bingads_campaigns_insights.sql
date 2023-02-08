@@ -26,7 +26,8 @@
    "all_conversion_rate",
    "all_cost_per_conversion",
    "all_revenue_on_ad_spend",
-   "all_revenue_per_conversion"
+   "all_revenue_per_conversion",
+   "custom_parameters"
 ]
 -%}
 
