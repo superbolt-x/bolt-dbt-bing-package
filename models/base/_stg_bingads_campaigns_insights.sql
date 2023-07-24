@@ -4,7 +4,7 @@
 ) }}
 
 
-{%- set schema_name, insights_table_name = 'bingads_raw', 'campaign_performance_daily_report' -%}
+{%- set schema_name, insights_table_name = 'bingads_raw', 'campaign_impression_performance_daily_report' -%}
 {%- set insights_exclude_fields = [
    "_fivetran_id",
    "ctr",
@@ -27,7 +27,16 @@
    "all_cost_per_conversion",
    "all_revenue_on_ad_spend",
    "all_revenue_per_conversion",
-   "custom_parameters"
+   "custom_parameters",
+   "absolute_top_impression_share_lost_to_rank_percent",
+   "absolute_top_impression_share_percent",
+   "absolute_top_impression_share_lost_to_budget_percent",
+   "absolute_top_impression_rate_percent",
+   "exact_match_impression_share_percent",
+   "top_impression_share_lost_to_rank_percent",
+   "top_impression_share_percent",
+   "top_impression_share_lost_to_budget_percent",
+   "top_impression_rate_percent"
 ]
 -%}
 
