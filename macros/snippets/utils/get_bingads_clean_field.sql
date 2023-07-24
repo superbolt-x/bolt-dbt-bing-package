@@ -5,10 +5,10 @@
     {%- if column_name in ('last_modified_time','modified_time') -%}
     {{column_name}} as updated_at
     
-    {%- elif column_name == 'impressionsharepercent' -%}
+    {%- elif column_name == 'impression_share_percent' -%}
     {{column_name}}/100 as impression_share
     
-    {%- elif column_name == 'topimpressionratepercent' -%}
+    {%- elif column_name == 'top_impression_rate_percent' -%}
     SPLIT_PART({{column_name}},'%',1)::decimal/100 as top_impression_rate
 
     {%- elif 'keyword' in column_name -%}
