@@ -24,7 +24,7 @@ WITH
         {%-  endfor %}
         {% for measure in measures -%}
         {%- if measure == 'impression_share' -%}
-        COALESCE(SUM(impressions)::float/NULLIF(SUM(COALESCE(impressions::float/NULLIF("{{ measure }}"::float,0),0)),0)::float,0) as "{{ measure }}"
+        COALESCE(SUM(CASE WHEN "{{ measure }}" IS NOT NULL THEN impressions)::float/NULLIF(SUM(COALESCE(impressions::float/NULLIF("{{ measure }}"::float,0),0)),0)::float,0) as "{{ measure }}"
         {%- else -%}
         COALESCE(SUM("{{ measure }}"),0) as "{{ measure }}"
         {%- endif %}
