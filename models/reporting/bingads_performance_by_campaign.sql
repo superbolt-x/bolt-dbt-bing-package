@@ -23,7 +23,11 @@ WITH
         {{ dimension }},
         {%-  endfor %}
         {% for measure in measures -%}
+        {%- if measure == 'impression_share' -%}
+        COALESCE(SUM(impressions)::float/NULLIF(SUM(impressions::float/"{{ measure }}"::float),0)::float,0) as "{{ measure }}"
+        {%- else -%}
         COALESCE(SUM("{{ measure }}"),0) as "{{ measure }}"
+        {%- endif %}
         {%- if not loop.last %},{%- endif %}
         {% endfor %}
     FROM {{ ref('bingads_campaigns_insights') }}
