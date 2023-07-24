@@ -36,7 +36,9 @@
    "top_impression_share_lost_to_rank_percent",
    "top_impression_share_percent",
    "top_impression_share_lost_to_budget_percent",
-   "top_impression_rate_percent"
+   "top_impression_rate_percent",
+   "impression_lost_to_rank_agg_percent",
+   "impression_lost_to_budget_percent"
 ]
 -%}
 
