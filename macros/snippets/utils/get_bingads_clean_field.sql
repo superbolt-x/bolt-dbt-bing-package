@@ -6,10 +6,13 @@
     {{column_name}} as updated_at
     
     {%- elif column_name == 'impression_share_percent' -%}
-    {{column_name}}/100 as impression_share
-    
-    {%- elif column_name == 'top_impression_rate_percent' -%}
-    SPLIT_PART({{column_name}},'%',1)::decimal/100 as top_impression_rate
+    {{column_name}}::float/100::float as impression_share
+
+    {%- elif column_name == 'impression_lost_to_budget_percent' -%}
+    {{column_name}}::float/100::float as impression_lost_to_budget_percent
+
+    {%- elif column_name == 'impression_lost_to_rank_agg_percent' -%}
+    {{column_name}}::float/100::float as impression_lost_to_rank_agg_percent
 
     {%- elif 'keyword' in column_name -%}
     {{column_name}} as keyword_{{column_name.split('keyword')[1]}}
