@@ -14,7 +14,7 @@ sources:
       - name: ads
         identifier: ad_history
       - name: ad_performance_daily_report
-      - name: campaign_performance_daily_report
+      - name: campaign_impression_performance_daily_report
       - name: search_query_performance_daily_report
       - name: keywords
         identifier: keyword_history
