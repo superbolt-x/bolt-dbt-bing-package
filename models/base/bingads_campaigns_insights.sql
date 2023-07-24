@@ -13,12 +13,9 @@
     "campaign_name",
     "campaign_status",
     "currency_code",
-    "bid_match_type",
     "delivered_match_type",
-    "device_os",
     "device_type",
     "network",
-    "top_vs_other",
     "average_position",
     "conversions_qualified",
     "low_quality_clicks",
@@ -31,10 +28,7 @@
     "landing_page_experience",
     "phone_impressions",
     "phone_calls",
-    "all_conversions_qualified",
-    "budget_name",
-    "budget_status",
-    "budget_association_status"
+    "all_conversions_qualified"
 ]
 -%}
 
