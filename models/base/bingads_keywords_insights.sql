@@ -23,7 +23,19 @@
     "top_vs_other",
     "average_position",
     "conversions_qualified",
-    "all_conversions_qualified"
+    "all_conversions_qualified",
+    "current_max_cpc",
+    "quality_score",
+    "expected_ctr",
+    "ad_relevance",
+    "landing_page_experience",
+    "historical_quality_score",
+    "historical_expected_ctr",
+    "historical_ad_relevance",
+    "historical_landing_page_experience",
+    "quality_impact",
+    "keyword__status",
+    "all_return_on_ad_spend"
 ]
 -%}
 
