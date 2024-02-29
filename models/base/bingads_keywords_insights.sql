@@ -14,6 +14,7 @@
     "ad_group_id",
     "bid_match_type",
     "delivered_match_type",
+    "keyword_status",
     "currency_code",
     "device_os",
     "device_type",
