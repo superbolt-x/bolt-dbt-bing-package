@@ -26,7 +26,7 @@
 ]
 -%}
 
-{%- set stg_fields = adapter.get_columns_in_relation(ref('_stg_bingads_ads_insights'))
+{%- set stg_fields = adapter.get_columns_in_relation(ref('_stg_bingads_keywords_insights'))
                     |map(attribute="name")
                     |reject("in",exclude_fields)
                     -%}  
