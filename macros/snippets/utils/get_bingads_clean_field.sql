@@ -14,7 +14,7 @@
     {%- elif column_name == 'impression_lost_to_rank_agg_percent' -%}
     {{column_name}}::float/100::float as impression_lost_to_rank_agg_percent
 
-    {%- elif 'keyword' in column_name -%}
+    {%- elif 'keyword' in column_name and column_name != 'keyword_id' -%}
     {{column_name}} as keyword_{{column_name.split('keyword')[1]}}
 
     {#- /* Apply to specific table */ -#}
