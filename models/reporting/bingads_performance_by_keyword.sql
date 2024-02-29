@@ -32,7 +32,7 @@ WITH
     {%- endfor %}
 
     keywords AS 
-    (SELECT {{ dbt_utils.star(from = ref('bingads_keywords'), except = ["unique_key"]) }}
+    (SELECT keyword_id, name, match_type, status
     FROM {{ ref('bingads_keywords') }}
     ),
     
