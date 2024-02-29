@@ -52,6 +52,16 @@
         
         {%- endif -%}
 
+    {%- elif "keyword" in table_name -%}
+
+        {%- if column_name == 'id' -%}
+        {{column_name}} as keyword_{{column_name}}
+
+        {%- else -%}
+        {{column_name}}
+        
+        {%- endif -%}
+
     {%- else -%}
     {{column_name}} 
 
