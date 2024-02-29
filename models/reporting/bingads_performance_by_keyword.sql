@@ -58,7 +58,7 @@ WITH
 
 SELECT *,
     {{ get_bingads_default_campaign_types('campaign_name')}},
-    date||'_'||date_granularity||'_'||ad_group_id||'_'||ad_id||'_'||keyword_id||'_'||delivered_match_type as unique_key
+    date||'_'||date_granularity||'_'||ad_group_id||'_'||ad_id||'_'||keyword_id as unique_key
 FROM 
     ({% for date_granularity in date_granularity_list -%}
     SELECT *
